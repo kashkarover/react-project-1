@@ -2,10 +2,16 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
-  let postsData = [
+  let posts = [
     { id: 1, message: 'Hi, how are you?', likesCount: 15 },
     { id: 2, message: "It's my first post!", likesCount: 12 },
+    { id: 3, message: 'My name is Ravil', likesCount: 7 },
+    { id: 4, message: 'I love React!', likesCount: 45 },
   ];
+
+  let postsElements = posts.map((p) => (
+    <Post message={p.message} like={p.likesCount} />
+  ));
 
   return (
     <div className={classes.postsBlock}>
@@ -16,10 +22,7 @@ const MyPosts = () => {
       <div>
         <button>Add post</button>
       </div>
-      <div className={classes.posts}>
-        <Post message={postsData[0].message} like={postsData[0].likesCount} />
-        <Post message={postsData[1].message} like={postsData[1].likesCount} />
-      </div>
+      <div className={classes.posts}>{postsElements}</div>
     </div>
   );
 };
