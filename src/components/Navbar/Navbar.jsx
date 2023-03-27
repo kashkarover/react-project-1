@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import classes from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  let FriendsOnlineElements = props.state.friendsOnline.map((f) => (
+    <div className={classes.friends_online}>{f.name}</div>
+  ));
   return (
     <nav className={classes.nav}>
       <div>
@@ -53,6 +56,10 @@ const Navbar = () => {
         >
           Settings
         </NavLink>
+      </div>
+      <div className={classes.friends}>
+        <h2>Friends</h2>
+        {FriendsOnlineElements}
       </div>
     </nav>
   );
