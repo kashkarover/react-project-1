@@ -7,6 +7,7 @@ import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 import News from './components/News/News';
 import Music from './components/Music/Music';
+import { addPost } from './redux/state';
 
 function App(props) {
   return (
@@ -18,7 +19,12 @@ function App(props) {
           <Routes>
             <Route
               path='/profile'
-              element={<Profile state={props.state.profilePage} />}
+              element={
+                <Profile
+                  state={props.state.profilePage}
+                  addPost={props.addPost}
+                />
+              }
             />
             <Route
               path='/dialogs/*'

@@ -5,6 +5,7 @@ const Navbar = (props) => {
   let FriendsOnlineElements = props.state.friendsOnline.map((f) => (
     <div className={classes.friends_online}>{f.name}</div>
   ));
+
   return (
     <nav className={classes.nav}>
       <div>
