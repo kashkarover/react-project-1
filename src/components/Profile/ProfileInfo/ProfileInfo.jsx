@@ -4,7 +4,10 @@ const ProfileInfo = () => {
   return (
     <div>
       <div className={classes.wallpaper}>
-        <img src='https://img3.goodfon.com/original/1152x864/e/31/novaya-kaledoniya-tihiy-okean.jpg'></img>
+        <img
+          alt='wallpaper'
+          src='https://vsegda-pomnim.com/uploads/posts/2022-04/1650892091_4-vsegda-pomnim-com-p-dolomitovie-gori-foto-4.jpg'
+        ></img>
       </div>
       <div className={classes.descriptionBlock}>ava + description</div>
     </div>

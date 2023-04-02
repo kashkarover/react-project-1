@@ -5,7 +5,7 @@ const Post = (props) => {
     <div className={classes.item}>
       <img
         alt='profile small img'
-        src='https://img3.goodfon.com/original/1152x864/e/31/novaya-kaledoniya-tihiy-okean.jpg'
+        src='https://catherineasquithgallery.com/uploads/posts/2021-03/1614586263_33-p-deidara-na-belom-fone-35.jpg'
       ></img>
       {props.message}
       <div>
