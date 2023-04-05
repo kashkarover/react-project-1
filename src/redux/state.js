@@ -8,6 +8,7 @@ let state = {
       { id: 3, message: 'My name is Ravil', likesCount: 7 },
       { id: 4, message: 'I love React!', likesCount: 45 },
     ],
+    newPostText: 'asdasd',
   },
   dialogsPage: {
     dialogs: [
@@ -44,6 +45,11 @@ export let addPost = (postMessage) => {
   };
 
   state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 };
 
